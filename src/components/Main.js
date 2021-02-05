@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import pic01 from '../images/pic01.jpg'
+import nader from '../images/nader.png'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 import Grid from '@material-ui/core/Grid'
@@ -30,28 +30,47 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Companies</h2>
-          <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="center"
-          >
-            <Grid item xs={12} sm={6} style={{padding:"50px"}} onClick={() => {window.open("https://brev.dev",'_blank');}}>
+          <Grid container direction="row" justify="center" alignItems="center">
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              style={{ padding: '50px' }}
+              onClick={() => {
+                window.open('https://brev.dev', '_blank')
+              }}
+            >
               🥞 Brev
               <p>The shortest stack you'll ever need.</p>
-              </Grid>
-            <Grid item xs={12} sm={6} style={{padding:"50px"}} onClick={() => {window.open("https://joinglimpse.com",'_blank');}}>
-             🚀 Glimpse
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              style={{ padding: '50px' }}
+              onClick={() => {
+                window.open('https://joinglimpse.com', '_blank')
+              }}
+            >
+              🚀 Glimpse
               <p>Video calls for humans who like humans.</p>
-              </Grid>
-            <Grid item xs={12} sm={6} style={{padding:"50px"}} >
-             👣 Stealth @ Growth
+            </Grid>
+            <Grid item xs={12} sm={6} style={{ padding: '50px' }}>
+              👣 Stealth @ Growth
               <p>__________________</p>
-              </Grid>
-            <Grid item xs={12} sm={6} style={{padding:"50px"}} onClick={() => {window.open("https://trove.so",'_blank');}}>
-             🤫 Trove
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              style={{ padding: '50px' }}
+              onClick={() => {
+                window.open('https://trove.so', '_blank')
+              }}
+            >
+              🤫 Trove
               <p>The internet's internet.</p>
-              </Grid>
+            </Grid>
           </Grid>
           {close}
         </article>
@@ -64,7 +83,63 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">People</h2>
-          <span className="image main">
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            style={{ textAlign: 'center' }}
+          >
+            <Grid item xs={4}>
+              <Profile
+                img={nader}
+                name={'Nader Khalil'}
+                twitter={'https://twitter.com/naderlikeladder'}
+                github={'https://github.com/naderlikeladder'}
+              />
+            </Grid>
+            <Grid item xs={4}>
+              <Profile
+                img={nader}
+                name={'Nader Khalil'}
+                twitter={'https://twitter.com/naderlikeladder'}
+                github={'https://github.com/naderlikeladder'}
+              />
+            </Grid>
+            <Grid item xs={4}>
+              <Profile
+                img={nader}
+                name={'Nader Khalil'}
+                twitter={'https://twitter.com/naderlikeladder'}
+                github={'https://github.com/naderlikeladder'}
+              />
+            </Grid>
+            <Grid item xs={4}>
+              <Profile
+                img={nader}
+                name={'Nader Khalil'}
+                twitter={'https://twitter.com/naderlikeladder'}
+                github={'https://github.com/naderlikeladder'}
+              />
+            </Grid>
+            <Grid item xs={4}>
+              <Profile
+                img={nader}
+                name={'Nader Khalil'}
+                twitter={'https://twitter.com/naderlikeladder'}
+                github={'https://github.com/naderlikeladder'}
+              />
+            </Grid>
+            <Grid item xs={4}>
+              <Profile
+                img={nader}
+                name={'Nader Khalil'}
+                twitter={'https://twitter.com/naderlikeladder'}
+                github={'https://github.com/naderlikeladder'}
+              />
+            </Grid>
+          </Grid>
+          {/* <span className="image main">
             <img src={pic02} alt="" />
           </span>
           <p>
@@ -81,7 +156,7 @@ class Main extends React.Component {
             Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
             libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
             tempus.
-          </p>
+          </p> */}
           {close}
         </article>
 
@@ -183,3 +258,46 @@ Main.propTypes = {
 }
 
 export default Main
+
+const Profile = props => {
+  return (
+    <>
+      <img
+        src={props.img}
+        alt=""
+        style={{ borderRadius: '100%', height: '165px', width: '150px' }}
+      />
+      <p>{props.name}</p>
+      <ul className="icons">
+        {props.twitter && (
+          <li>
+            <a href={props.twitter} className="icon fa-twitter">
+              <span className="label">Twitter</span>
+            </a>
+          </li>
+        )}
+        {props.fb && (
+          <li>
+            <a href={props.fb} className="icon fa-facebook">
+              <span className="label">Facebook</span>
+            </a>
+          </li>
+        )}
+        {props.instagram && (
+          <li>
+            <a href={props.instagram} className="icon fa-instagram">
+              <span className="label">Instagram</span>
+            </a>
+          </li>
+        )}
+        {props.github && (
+          <li>
+            <a href={props.github} className="icon fa-github">
+              <span className="label">GitHub</span>
+            </a>
+          </li>
+        )}
+      </ul>
+    </>
+  )
+}
