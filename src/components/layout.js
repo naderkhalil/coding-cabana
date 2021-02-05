@@ -2,25 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import thumbnail from "../images/thumbnail.png";
 
 import '../assets/scss/main.scss'
 
 const Layout = ({ children, location }) => {
-
-  let content;
+  let content
 
   if (location && location.pathname === '/') {
-    content = (
-      <div>
-        {children}
-      </div>
-    )
+    content = <div>{children}</div>
   } else {
     content = (
       <div id="wrapper" className="page">
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
       </div>
     )
   }
@@ -43,6 +37,22 @@ const Layout = ({ children, location }) => {
             meta={[
               { name: 'description', content: 'Sample' },
               { name: 'keywords', content: 'sample, something' },
+              {
+                name: `image`,
+                content: thumbnail,
+              },
+              {
+                name: `og:image`,
+                content: thumbnail,
+              },
+              {
+                name: `twitter:image:src`,
+                content: thumbnail,
+              },
+              {
+                name: `fb:admins`,
+                content: thumbnail,
+              },
             ]}
           >
             <html lang="en" />
