@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Coding Cabana',
-    author: 'Coding Cabana',
     description: 'Coding Cabana :)',
+    title: 'Coding Cabana 🚀',
+    author: '🤓',
+    description: 'Radical Candor is Underrated',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
