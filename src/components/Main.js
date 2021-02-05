@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import nader from '../images/nader.png'
+import helena from '../images/helenamerk.jpeg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 import Grid from '@material-ui/core/Grid'
@@ -100,10 +101,10 @@ class Main extends React.Component {
             </Grid>
             <Grid item xs={4}>
               <Profile
-                img={nader}
-                name={'Nader Khalil'}
-                twitter={'https://twitter.com/naderlikeladder'}
-                github={'https://github.com/naderlikeladder'}
+                img={helena}
+                name={'Helena Merk'}
+                twitter={'https://twitter.com/helenamerk'}
+                github={'https://github.com/helenamerk'}
               />
             </Grid>
             <Grid item xs={4}>
