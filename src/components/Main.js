@@ -116,10 +116,10 @@ class Main extends React.Component {
             </Grid>
             <Grid item xs={4}>
               <Profile
-                img={nader}
-                name={'Nader Khalil'}
-                twitter={'https://twitter.com/naderlikeladder'}
-                github={'https://github.com/naderlikeladder'}
+                img={helena}
+                name={'Helena Merk'}
+                twitter={'https://twitter.com/helenamerk'}
+                github={'https://github.com/helenamerk'}
               />
             </Grid>
             <Grid item xs={4}>
@@ -132,10 +132,10 @@ class Main extends React.Component {
             </Grid>
             <Grid item xs={4}>
               <Profile
-                img={nader}
-                name={'Nader Khalil'}
-                twitter={'https://twitter.com/naderlikeladder'}
-                github={'https://github.com/naderlikeladder'}
+                img={helena}
+                name={'Helena Merk'}
+                twitter={'https://twitter.com/helenamerk'}
+                github={'https://github.com/helenamerk'}
               />
             </Grid>
           </Grid>
@@ -172,7 +172,8 @@ class Main extends React.Component {
             <img src={cayucos} alt="" />
           </span>
           <p>
-            We're in a charming surf town called Cayucos on California's central coast. 
+            We're in a charming surf town called Cayucos on California's central
+            coast.
           </p>
           {close}
         </article>
@@ -259,7 +260,12 @@ const Profile = props => {
       <img
         src={props.img}
         alt=""
-        style={{ borderRadius: '100%', height: '165px', width: '150px' }}
+        style={{
+          borderRadius: '100%',
+          height: '165px',
+          width: '150px',
+          objectFit: 'cover',
+        }}
       />
       <p>{props.name}</p>
       <ul className="icons">
