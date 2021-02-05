@@ -11,6 +11,7 @@ function Main(props) {
   const [email, setEmail] = React.useState('')
   const [msg, setMsg] = React.useState('')
   const [open, setOpen] = React.useState(false);
+  const [submitting, setSubmitting] = React.useState(false);
 
   let close = (
     <div
@@ -22,6 +23,7 @@ function Main(props) {
   )
 
   const submitData = async () => {
+    setSubmitting(true);
     const response = await fetch("https://4wzjxgkv.brev.dev/api/websiteForm", {
       method: "POST",
       body: JSON.stringify({
@@ -34,6 +36,7 @@ function Main(props) {
     if (response.status===200) {
       setOpen(true);
     }
+    setSubmitting(false);
   }
 
   return (
@@ -60,7 +63,7 @@ function Main(props) {
               window.open('https://brev.dev', '_blank')
             }}
           >
-            🥞 Brev
+            <span role="img" aria-label="brev">🥞</span> Brev
             <p>The shortest stack you'll ever need.</p>
           </Grid>
           <Grid
@@ -72,11 +75,11 @@ function Main(props) {
               window.open('https://joinglimpse.com', '_blank')
             }}
           >
-            🚀 Glimpse
+            <span role="img" aria-label="glimpse">🚀</span> Glimpse
             <p>Video calls for humans who like humans.</p>
           </Grid>
           <Grid item xs={12} sm={6} style={{ padding: '50px' }}>
-            👣 Stealth @ Growth
+          <span role="img" aria-label="stealth">👣</span> Stealth @ Growth
             <p>__________________</p>
           </Grid>
           <Grid
@@ -88,7 +91,7 @@ function Main(props) {
               window.open('https://trove.so', '_blank')
             }}
           >
-            🤫 Trove
+            <span role="img" aria-label="trove">🤫</span> Trove
             <p>The internet's internet.</p>
           </Grid>
         </Grid>
@@ -226,7 +229,12 @@ function Main(props) {
         </form>
           <ul className="actions">
             <li>
-              <button onClick={submitData}>Send Message</button>
+              <button 
+                onClick={submitData}
+                style={submitting? {boxShadow: "none"}: {}}
+                >
+                <p className={submitting? "ellipsis" : ""}>{submitting? "           " :  "Send Message"}</p>
+              </button>
             </li>
             <li>
               <input type="reset" value="Reset" />
