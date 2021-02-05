@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-dimension-v2",
-  "description": "Gatsby Starter - Dimension V2",
+  "description": "Coding Cabana",
   "version": "1.0.0",
   "author": "Hunter Chang",
   "dependencies": {
@@ -29,6 +29,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/naderkhalil/coding-cabana"
   }
 }
