@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import nader from '../images/nader.png'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
 import cayucos from '../images/Sunset.png'
 import Grid from '@material-ui/core/Grid'
 
