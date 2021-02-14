@@ -145,7 +145,7 @@ function Main(props) {
               img={ali}
               name={'Ali Ahmed'}
               twitter={'https://twitter.com/ali_wetrill'}
-              github={'https://github.com/helenamerk'}
+              github={'https://github.com/ali-wetrill'}
             />
           </Grid>
           <Grid item xs={4}>
