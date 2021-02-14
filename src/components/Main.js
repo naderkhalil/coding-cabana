@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import nader from '../images/nader.png'
+import nader from '../images/nader.jpg'
 import cayucos from '../images/Sunset.png'
 import helena from '../images/helenamerk.jpeg'
 import alec from '../images/alec.jpg'
