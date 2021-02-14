@@ -3,6 +3,9 @@ import React from 'react'
 import nader from '../images/nader.png'
 import cayucos from '../images/Sunset.png'
 import helena from '../images/helenamerk.jpeg'
+import alec from '../images/alec.jpg'
+import ali from '../images/ali.jpg'
+import kate from '../images/kate.jpg'
 import Grid from '@material-ui/core/Grid'
 
 
@@ -115,14 +118,6 @@ function Main(props) {
         >
           <Grid item xs={4}>
             <Profile
-              img={nader}
-              name={'Nader Khalil'}
-              twitter={'https://twitter.com/naderlikeladder'}
-              github={'https://github.com/naderlikeladder'}
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <Profile
               img={helena}
               name={'Helena Merk'}
               twitter={'https://twitter.com/helenamerk'}
@@ -134,23 +129,31 @@ function Main(props) {
               img={nader}
               name={'Nader Khalil'}
               twitter={'https://twitter.com/naderlikeladder'}
-              github={'https://github.com/naderlikeladder'}
+              github={'https://github.com/brevdev'}
             />
           </Grid>
           <Grid item xs={4}>
             <Profile
-              img={helena}
-              name={'Helena Merk'}
-              twitter={'https://twitter.com/helenamerk'}
+              img={alec}
+              name={'Alec Fong'}
+              twitter={'https://twitter.com/the__fong'}
+              github={'https://github.com/theFong'}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <Profile
+              img={ali}
+              name={'Ali Ahmed'}
+              twitter={'https://twitter.com/ali_wetrill'}
               github={'https://github.com/helenamerk'}
             />
           </Grid>
           <Grid item xs={4}>
             <Profile
-              img={nader}
-              name={'Nader Khalil'}
-              twitter={'https://twitter.com/naderlikeladder'}
-              github={'https://github.com/naderlikeladder'}
+              img={kate}
+              name={'Kate Chen'}
+              twitter={'https://twitter.com/katezchenn'}
+              github={'https://github.com/katzchen0713'}
             />
           </Grid>
           <Grid item xs={4}>
