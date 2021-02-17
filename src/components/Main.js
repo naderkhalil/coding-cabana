@@ -6,15 +6,15 @@ import helena from '../images/helenamerk.jpeg'
 import alec from '../images/alec.jpg'
 import ali from '../images/ali.jpg'
 import kate from '../images/kate.jpg'
+import nathan from '../images/nathan.jpg'
 import Grid from '@material-ui/core/Grid'
-
 
 function Main(props) {
   const [name, setName] = React.useState('')
   const [email, setEmail] = React.useState('')
   const [msg, setMsg] = React.useState('')
-  const [open, setOpen] = React.useState(false);
-  const [submitting, setSubmitting] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
+  const [submitting, setSubmitting] = React.useState(false)
 
   let close = (
     <div
@@ -26,20 +26,20 @@ function Main(props) {
   )
 
   const submitData = async () => {
-    setSubmitting(true);
-    const response = await fetch("https://4wzjxgkv.brev.dev/api/websiteForm", {
-      method: "POST",
+    setSubmitting(true)
+    const response = await fetch('https://4wzjxgkv.brev.dev/api/websiteForm', {
+      method: 'POST',
       body: JSON.stringify({
         name: name,
         email: email,
-        message: msg
-      })
-    });
+        message: msg,
+      }),
+    })
     console.log(response)
-    if (response.status===200) {
-      setOpen(true);
+    if (response.status === 200) {
+      setOpen(true)
     }
-    setSubmitting(false);
+    setSubmitting(false)
   }
 
   return (
@@ -66,7 +66,10 @@ function Main(props) {
               window.open('https://brev.dev', '_blank')
             }}
           >
-            <span role="img" aria-label="brev">🥞</span> Brev
+            <span role="img" aria-label="brev">
+              🥞
+            </span>{' '}
+            Brev
             <p>The shortest stack you'll ever need.</p>
           </Grid>
           <Grid
@@ -78,11 +81,17 @@ function Main(props) {
               window.open('https://joinglimpse.com', '_blank')
             }}
           >
-            <span role="img" aria-label="glimpse">🚀</span> Glimpse
+            <span role="img" aria-label="glimpse">
+              🚀
+            </span>{' '}
+            Glimpse
             <p>Video calls for humans who like humans.</p>
           </Grid>
           <Grid item xs={12} sm={6} style={{ padding: '50px' }}>
-          <span role="img" aria-label="stealth">👣</span> Stealth @ Growth
+            <span role="img" aria-label="stealth">
+              👣
+            </span>{' '}
+            Stealth @ Growth
             <p>__________________</p>
           </Grid>
           <Grid
@@ -94,7 +103,10 @@ function Main(props) {
               window.open('https://trove.so', '_blank')
             }}
           >
-            <span role="img" aria-label="trove">🤫</span> Trove
+            <span role="img" aria-label="trove">
+              🤫
+            </span>{' '}
+            Trove
             <p>The internet's internet.</p>
           </Grid>
         </Grid>
@@ -150,18 +162,18 @@ function Main(props) {
           </Grid>
           <Grid item xs={4}>
             <Profile
-              img={kate}
-              name={'Kate Chen'}
-              twitter={'https://twitter.com/katezchenn'}
-              github={'https://github.com/katzchen0713'}
+              img={nathan}
+              name={'Nathan Ostrowski'}
+              twitter={'https://twitter.com/ncostrowski'}
+              github={'https://github.com/no40'}
             />
           </Grid>
           <Grid item xs={4}>
             <Profile
-              img={helena}
-              name={'Helena Merk'}
-              twitter={'https://twitter.com/helenamerk'}
-              github={'https://github.com/helenamerk'}
+              img={kate}
+              name={'Kate Chen'}
+              twitter={'https://twitter.com/katezchenn'}
+              github={'https://github.com/katzchen0713'}
             />
           </Grid>
         </Grid>
@@ -193,9 +205,7 @@ function Main(props) {
         }`}
         style={{ display: 'none' }}
       >
-        {open && 
-        <h3 style={{color: "green"}}>Your message was sent!</h3>
-        }
+        {open && <h3 style={{ color: 'green' }}>Your message was sent!</h3>}
 
         <h2 className="major">Contact</h2>
         <form onsubmit="return capture();">
@@ -206,7 +216,7 @@ function Main(props) {
               name="name"
               id="name"
               value={name}
-              onChange={e => setName(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="field half">
@@ -216,7 +226,7 @@ function Main(props) {
               name="email"
               id="email"
               value={email}
-              onChange={e => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="field">
@@ -226,23 +236,25 @@ function Main(props) {
               id="message"
               rows="4"
               value={msg}
-              onChange={e => setMsg(e.target.value)}
+              onChange={(e) => setMsg(e.target.value)}
             ></textarea>
           </div>
         </form>
-          <ul className="actions">
-            <li>
-              <button 
-                onClick={submitData}
-                style={submitting? {boxShadow: "none"}: {}}
-                >
-                <p className={submitting? "ellipsis" : ""}>{submitting? "           " :  "Send Message"}</p>
-              </button>
-            </li>
-            <li>
-              <input type="reset" value="Reset" />
-            </li>
-          </ul>
+        <ul className="actions">
+          <li>
+            <button
+              onClick={submitData}
+              style={submitting ? { boxShadow: 'none' } : {}}
+            >
+              <p className={submitting ? 'ellipsis' : ''}>
+                {submitting ? '           ' : 'Send Message'}
+              </p>
+            </button>
+          </li>
+          <li>
+            <input type="reset" value="Reset" />
+          </li>
+        </ul>
         {/* <ul className="icons">
             <li>
               <a
@@ -288,7 +300,7 @@ Main.propTypes = {
 
 export default Main
 
-const Profile = props => {
+const Profile = (props) => {
   return (
     <>
       <img
