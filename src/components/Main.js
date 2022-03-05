@@ -2,11 +2,12 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import nader from '../images/nader.jpg'
 import cayucos from '../images/Sunset.png'
+import sfsunset from '../images/sfsunset.jpeg'
 import helena from '../images/helenamerk.jpeg'
 import alec from '../images/alec.jpg'
 import ali from '../images/ali.jpg'
 import kate from '../images/kate.jpg'
-import nathan from '../images/nathan.jpg'
+import evan from '../images/evan.jpeg'
 import Grid from '@material-ui/core/Grid'
 
 function Main(props) {
@@ -67,10 +68,10 @@ function Main(props) {
             }}
           >
             <span role="img" aria-label="brev">
-              🥞
+              🤙
             </span>{' '}
             Brev
-            <p>The shortest stack you'll ever need.</p>
+            <p>Developer environments that just work</p>
           </Grid>
           <Grid
             item
@@ -78,21 +79,21 @@ function Main(props) {
             sm={6}
             style={{ padding: '50px' }}
             onClick={() => {
-              window.open('https://joinglimpse.com', '_blank')
+              window.open('https://techcrunch.com/2022/02/10/remote-work-and-events-startup-twine-acquires-yc-backed-glimpse-to-launch-on-zoom/', '_blank')
             }}
           >
             <span role="img" aria-label="glimpse">
               🚀
             </span>{' '}
-            Glimpse
+            Glimpse (acquired)
             <p>Video calls for humans who like humans.</p>
           </Grid>
           <Grid item xs={12} sm={6} style={{ padding: '50px' }}>
             <span role="img" aria-label="stealth">
-              👣
+              🐳
             </span>{' '}
-            Stealth @ Growth
-            <p>__________________</p>
+            All G
+            <p>Fixing the climate, one algae at a time</p>
           </Grid>
           <Grid
             item
@@ -100,14 +101,14 @@ function Main(props) {
             sm={6}
             style={{ padding: '50px' }}
             onClick={() => {
-              window.open('https://trove.so', '_blank')
+              window.open('https://strangemood.org', '_blank')
             }}
           >
             <span role="img" aria-label="trove">
-              🤫
+              🕹
             </span>{' '}
-            Trove
-            <p>The internet's internet.</p>
+            Strangemood
+            <p>It's like Steam, but as a co-op</p>
           </Grid>
         </Grid>
         {close}
@@ -162,10 +163,10 @@ function Main(props) {
           </Grid>
           <Grid item xs={4}>
             <Profile
-              img={nathan}
-              name={'Nathan Ostrowski'}
-              twitter={'https://twitter.com/ncostrowski'}
-              github={'https://github.com/no40'}
+              img={evan}
+              name={'Evan Conrad'}
+              twitter={'https://twitter.com/evanjconrad'}
+              github={'https://github.com/Flaque'}
             />
           </Grid>
           <Grid item xs={4}>
@@ -189,11 +190,12 @@ function Main(props) {
       >
         <h2 className="major">Location</h2>
         <span className="image main">
-          <img src={cayucos} alt="" />
+          <img src={sfsunset} alt="" />
+          {/* <img src={cayucos} alt="" /> */}
         </span>
+        <b>San Francisco, CA</b>
         <p>
-          We're in a charming surf town called Cayucos on California's central
-          coast.
+          We spent the pandemic Airbnb-hopping beach towns along California's central coast, but we're happy to be back in San Francisco. It's truly a magical city.
         </p>
         {close}
       </article>
@@ -205,7 +207,64 @@ function Main(props) {
         }`}
         style={{ display: 'none' }}
       >
-        {open && <h3 style={{ color: 'green' }}>Your message was sent!</h3>}
+        <h2 className="major">Contact</h2>
+
+        {/* <ul>
+          <li>Helena Merk: helena [at] codingcabana [dot] com</li>
+          <li>Nader Khalil: nader [at] codingcabana [dot] com</li>
+          
+        </ul> */}
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+          style={{ textAlign: 'center' }}
+        >
+          <Grid item xs={4}>
+            <ContactProfile
+              img={helena}
+              name={'Helena Merk'}
+              email={'helena@codingcabana.com'}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <ContactProfile
+              img={nader}
+              name={'Nader Khalil'}
+              email={'nader@codingcabana.com'}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <Profile
+              img={alec}
+              name={'Alec Fong'}
+              twitter={'https://twitter.com/the__fong'}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <Profile
+              img={ali}
+              name={'Ali Ahmed'}
+              twitter={'https://twitter.com/ali_wetrill'}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <Profile
+              img={evan}
+              name={'Evan Conrad'}
+              twitter={'https://twitter.com/evanjconrad'}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <Profile
+              img={kate}
+              name={'Kate Chen'}
+              twitter={'https://twitter.com/katezchenn'}
+            />
+          </Grid>
+        </Grid>
+        {/* {open && <h3 style={{ color: 'green' }}>Your message was sent!</h3>}
 
         <h2 className="major">Contact</h2>
         <form onsubmit="return capture();">
@@ -255,35 +314,7 @@ function Main(props) {
             <input type="reset" value="Reset" />
           </li>
         </ul>
-        {/* <ul className="icons">
-            <li>
-              <a
-                href="https://codingcabana.com"
-                className="icon fa-twitter"
-              >
-                <span className="label">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://codingcabana.com" className="icon fa-facebook">
-                <span className="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://codingcabana.com" className="icon fa-instagram">
-                <span className="label">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://codingcabana.com"
-                className="icon fa-github"
-              >
-                <span className="label">GitHub</span>
-              </a>
-            </li>
-          </ul> */}
-        {close}
+        {close} */}
       </article>
     </div>
   )
@@ -343,6 +374,29 @@ const Profile = (props) => {
             </a>
           </li>
         )}
+      </ul>
+    </>
+  )
+}
+const ContactProfile = (props) => {
+  return (
+    <>
+      <img
+        src={props.img}
+        alt=""
+        style={{
+          borderRadius: '100%',
+          height: '165px',
+          width: '150px',
+          objectFit: 'cover',
+        }}
+      />
+      <p>{props.name}</p>
+      <ul className="icons">
+      <li>
+        {props.email}    
+      </li>
+
       </ul>
     </>
   )
