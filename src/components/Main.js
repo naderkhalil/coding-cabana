@@ -8,6 +8,7 @@ import alec from '../images/alec.jpg'
 import ali from '../images/ali.jpg'
 import kate from '../images/kate.jpg'
 import evan from '../images/evan.jpeg'
+import izu from '../images/izu.jpeg'
 import Grid from '@material-ui/core/Grid'
 
 function Main(props) {
@@ -51,9 +52,8 @@ function Main(props) {
     >
       <article
         id="companies"
-        className={`${props.article === 'companies' ? 'active' : ''} ${
-          props.articleTimeout ? 'timeout' : ''
-        }`}
+        className={`${props.article === 'companies' ? 'active' : ''} ${props.articleTimeout ? 'timeout' : ''
+          }`}
         style={{ display: 'none' }}
       >
         <h2 className="major">Companies</h2>
@@ -71,7 +71,7 @@ function Main(props) {
               🤙
             </span>{' '}
             Brev
-            <p>Developer environments that just work</p>
+            <p>AI Dev tools</p>
           </Grid>
           <Grid
             item
@@ -83,17 +83,17 @@ function Main(props) {
             }}
           >
             <span role="img" aria-label="glimpse">
-              🚀
+              🌀
             </span>{' '}
-            Glimpse (acquired)
-            <p>Video calls for humans who like humans.</p>
+            Spirals
+            <p>Climate Tech</p>
           </Grid>
           <Grid item xs={12} sm={6} style={{ padding: '50px' }}>
             <span role="img" aria-label="stealth">
               🐳
             </span>{' '}
             All G
-            <p>Fixing the climate, one algae at a time</p>
+            <p>Climate Tech</p>
           </Grid>
           <Grid
             item
@@ -105,10 +105,10 @@ function Main(props) {
             }}
           >
             <span role="img" aria-label="trove">
-              🕹
+              🤖🦾
             </span>{' '}
-            Strangemood
-            <p>It's like Steam, but as a co-op</p>
+            Fable AI
+            <p>Generative AI</p>
           </Grid>
         </Grid>
         {close}
@@ -116,9 +116,8 @@ function Main(props) {
 
       <article
         id="people"
-        className={`${props.article === 'people' ? 'active' : ''} ${
-          props.articleTimeout ? 'timeout' : ''
-        }`}
+        className={`${props.article === 'people' ? 'active' : ''} ${props.articleTimeout ? 'timeout' : ''
+          }`}
         style={{ display: 'none' }}
       >
         <h2 className="major">People</h2>
@@ -155,18 +154,10 @@ function Main(props) {
           </Grid>
           <Grid item xs={4}>
             <Profile
-              img={ali}
-              name={'Ali Ahmed'}
-              twitter={'https://twitter.com/ali_wetrill'}
-              github={'https://github.com/ali-wetrill'}
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <Profile
-              img={evan}
-              name={'Evan Conrad'}
-              twitter={'https://twitter.com/evanjconrad'}
-              github={'https://github.com/Flaque'}
+              img={izu}
+              name={'Izu Elechi'}
+              twitter={'https://twitter.com/izuchukwuuu'}
+              github={'https://github.com/izuchukwu'}
             />
           </Grid>
           <Grid item xs={4}>
@@ -183,9 +174,8 @@ function Main(props) {
 
       <article
         id="location"
-        className={`${props.article === 'location' ? 'active' : ''} ${
-          props.articleTimeout ? 'timeout' : ''
-        }`}
+        className={`${props.article === 'location' ? 'active' : ''} ${props.articleTimeout ? 'timeout' : ''
+          }`}
         style={{ display: 'none' }}
       >
         <h2 className="major">Location</h2>
@@ -202,9 +192,8 @@ function Main(props) {
 
       <article
         id="contact"
-        className={`${props.article === 'contact' ? 'active' : ''} ${
-          props.articleTimeout ? 'timeout' : ''
-        }`}
+        className={`${props.article === 'contact' ? 'active' : ''} ${props.articleTimeout ? 'timeout' : ''
+          }`}
         style={{ display: 'none' }}
       >
         <h2 className="major">Contact</h2>
@@ -393,9 +382,9 @@ const ContactProfile = (props) => {
       />
       <p>{props.name}</p>
       <ul className="icons">
-      <li>
-        {props.email}    
-      </li>
+        <li>
+          {props.email}
+        </li>
 
       </ul>
     </>
